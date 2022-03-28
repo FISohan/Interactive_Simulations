@@ -27,7 +27,8 @@ function setup() {
     _width = windowWidth / 1.8;
     _height = windowHeight / 1.5;
   }
-  createCanvas(_width, _height);
+ let canvas =  createCanvas(_width, _height);
+ canvas.parent("canvas_parent");
   vector_main = p(5, 5, 20);
   control_point = new PointEvent(
     vector_main.x,
@@ -66,7 +67,6 @@ function draw() {
   strokeWeight(1);
   text("u", p1.x + 15, p1.y - 1);
 
-  console.log(p_1(vector_main.x, vector_main.y, cellSize));
 }
 
 function unit_vector(v) {
