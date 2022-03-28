@@ -14,7 +14,7 @@ class PointEvent {
     stroke(this.color);
     // point(this.position.x, this.position.y)
 
-    console.log(dist(mouseX, mouseY, this.width / 2, this.height / 2));
+
 
     if (
       mouseIsPressed ||

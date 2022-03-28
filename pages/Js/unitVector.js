@@ -21,6 +21,7 @@ var unit_vector;
 var fontsize = 15;
 
 var i_input_activation = true;
+var j_input_activation = true;
 
 function setup() {
   if (isMobile()) {
@@ -82,6 +83,10 @@ function draw() {
   if (i_input_activation) {
     e("i_input").value = f1.x.toFixed(3);
   }
+
+  if (j_input_activation) {
+    e("j_input").value = f1.y.toFixed(3);
+  }
 }
 
 document.getElementById("i_input").addEventListener("focus", (e) => {
@@ -89,8 +94,27 @@ document.getElementById("i_input").addEventListener("focus", (e) => {
 });
 
 document.getElementById("i_input").addEventListener("change", (e) => {
-  vector_main = p(parseFloat(e.target.value.x), vector_main.y, cellSize);
-  console.log();
+  let v = p(parseFloat(e.target.value), 0, cellSize);
+  control_point.position.x = v.x;
+  console.log(parseFloat(e.target.value));
+});
+
+document.getElementById("j_input").addEventListener("focus", (e) => {
+  j_input_activation = false;
+});
+
+document.getElementById("j_input").addEventListener("change", (e) => {
+  let v = p(0,parseFloat(e.target.value), cellSize);
+  control_point.position.y = v.y;
+  console.log(parseFloat(e.target.value));
+});
+
+document.getElementById("j_input").addEventListener("focusout", (e) => {
+  j_input_activation = true;
+});
+
+document.getElementById("i_input").addEventListener("focusout", (e) => {
+  i_input_activation = true;
 });
 
 function unit_vector(v) {
