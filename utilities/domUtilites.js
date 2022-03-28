@@ -1,0 +1,1 @@
+function e (idName){return document.getElementById(idName);}

@@ -19,6 +19,9 @@ var vector_main;
 var control_point;
 var unit_vector;
 var fontsize = 15;
+
+var i_input_activation = true;
+
 function setup() {
   if (isMobile()) {
     _width = windowWidth;
@@ -34,7 +37,9 @@ function setup() {
     vector_main.x,
     vector_main.y,
     [255, 10, 60],
-    10
+    10,
+    _height,
+    _width
   );
   // textFont(font);
   textSize(fontsize);
@@ -50,7 +55,7 @@ function draw() {
   stroke([25, 0, 0]);
 
   arrow(init_point.x, init_point.y, vector_main.x, vector_main.y);
-  
+
   control_point.move();
   let f1 = p_1(control_point.position.x, control_point.position.y, cellSize);
   vector_main = p(f1.x, f1.y, cellSize);
@@ -69,8 +74,24 @@ function draw() {
   stroke(0);
   strokeWeight(1);
   text("u", p1.x + 15, p1.y - 1);
- // console.log("Main Vector : ", p_1(vector_main.x, vector_main.y, cellSize));
+
+  let c = f1.y > 0 ? "+" : "-";
+
+  // $("main_vector").innerText = `A = ${f1.x.toFixed(3)}i ${c} ${Math.abs(f1.y.toFixed(3))}j`
+  // console.log("Main Vector : ", p_1(vector_main.x, vector_main.y, cellSize));
+  if (i_input_activation) {
+    e("i_input").value = f1.x.toFixed(3);
+  }
 }
+
+document.getElementById("i_input").addEventListener("focus", (e) => {
+  i_input_activation = false;
+});
+
+document.getElementById("i_input").addEventListener("change", (e) => {
+  vector_main = p(parseFloat(e.target.value.x), vector_main.y, cellSize);
+  console.log();
+});
 
 function unit_vector(v) {
   let f1 = p_1(v.x, v.y, cellSize);
