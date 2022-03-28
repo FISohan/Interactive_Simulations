@@ -1,29 +1,30 @@
-        *{
-            padding: 0;
-            margin: 0;
-            background-color: rgb(233, 230, 230);
-            text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(233, 230, 230);
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
 
-            -webkit-user-select: none; /* Safari */        
--moz-user-select: none; /* Firefox */
--ms-user-select: none; /* IE10+/Edge */
-user-select: none; /* Standard */
-        }
+body{
+     min-height: 100vh;
+}
 
-        canvas{
-            background: rgb(250, 120, 120);
-            box-shadow: 2px 3px 15px rgb(73, 72, 72);
-        }
+canvas {
+  background: rgb(250, 120, 120);
+  box-shadow: 2px 3px 15px rgb(73, 72, 72);
+}
 
-        #unit-vector{
-            text-decoration: none;
-            font-size: 20px;
-            color: rgb(0, 38, 255);
-            font-weight: 700;
-            
-            
-            
-        }
-        #unit-vector:hover{
-            text-decoration: underline;
-        }
+#unit-vector {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  color: rgb(74, 84, 139);
+  font-weight: 700;
+}
+
+#unit-vector:hover {
+  text-decoration: underline;
+}
