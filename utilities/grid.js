@@ -1,4 +1,4 @@
-function drawGrid(width, height, cellSize = 20, color = [10, 0, 0], color2 = [150], weight = 1.5) {
+function drawGrid(width, height, cellSize = 20, color = [100, 100, 100], color2 = [150], weight = 1.5) {
     //first draw middle line
 
     //draw grid      

@@ -8,13 +8,21 @@
   user-select: none; /* Standard */
 }
 
-body{
-     min-height: 100vh;
+body {
+  min-height: 100vh;
 }
-
+.canvsParent {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
 canvas {
   background: rgb(250, 120, 120);
-  box-shadow: 2px 3px 15px rgb(73, 72, 72);
+  box-shadow: 2px 3px 15px #494848;
+  margin: 0 auto;
+}
+.unitVectorText {
+  text-align: center;
 }
 
 #unit-vector {

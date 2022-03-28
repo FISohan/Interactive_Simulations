@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inter Active Simulations</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
 
-<body>
-
-    <h1>Unit vector example</h1>
-    <br>
+  <body>
+    <h1 class="unitVectorText">Unit vector example</h1>
+    <br />
+    <div id="canvas_parent" class="canvsParent"></div>
+    <br />
+    <div id="calculation_area">
+      <span>OP = </span> <input type="number" id="i_input" /><span>i</span>
+      <span>+</span><input type="number" id="j_input" /><span>j</span>
+    </div>
     <script src="../lib/p5/p5.js"></script>
     <script src="../utilities/event.js"></script>
     <script src="../utilities/grid.js"></script>
     <script src="../utilities/coordSystem.js"></script>
     <script src="../pages/Js/unitVector.js"></script>
-        <script src="../utilities/detectDevice.js"></script>
-
-
-</body>
-
+    <script src="../utilities/detectDevice.js"></script>
+    <script src="../utilities/arrowDraw.js"></script>
+    <script src="../utilities/domUtilites.js"></script>
+  </body>
 </html>
