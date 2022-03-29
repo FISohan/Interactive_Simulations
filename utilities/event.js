@@ -14,8 +14,6 @@ class PointEvent {
     stroke(this.color);
     // point(this.position.x, this.position.y)
 
-
-
     if (
       mouseIsPressed ||
       dist(mouseX, mouseY, this.position.x, this.position.y) < this.radius + 1
