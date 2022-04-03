@@ -20,9 +20,17 @@
     <br />
     <div id="canvas_parent" class="canvsParent"></div>
     <br />
-    <div id="calculation_area">
-      <span>OP = </span> <input type="number" id="i_input" /><span>i</span>
-      <span>+ </span><input type="number" id="j_input" /><span>j</span>
+
+
+    <div class="calculate-area-container">
+      <div class="output">
+        <span style="font-size: 20px; font-weight: 700; background-color: transparent;">OP = </span> <input type="number" id="i_input" />
+      <label  for="i_input">\(\vec{i}\)</label>
+      <span style="font-size: 20px; font-weight: 900; background-color: transparent;">+ </span><input type="number" id="j_input" />
+      <label for="j_input">\(\vec{j}\)</label>
+      </div>
+      <div id="calculation_area">
+      
 
       <p>
         If \(\vec{a}=2\vec{i}-7\vec{j}+\vec{k}\) and
@@ -32,6 +40,8 @@
          \(\vec{OP}= \vec{a}= 2\vec{i}-7\vec{j}+\vec{k}\)
       </p>
     </div>
+    </div>
+    
     <script src="../../lib/p5/p5.js"></script>
     <script src="../../utilities/event.js"></script>
     <script src="../../utilities/grid.js"></script>
